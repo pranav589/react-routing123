@@ -1,17 +1,17 @@
-import React from 'react';
+import React from 'react'
 
-const Rainbow=(WrappedComponent)=>{
-  const colors=['red','pink','orange','green','yellow'];
-  const randomColor=colors[Math.floor(Math.random()*4)]
-  const className=randomColor+'-text'
+const Rainbow = (WrappedComponent) => {
 
-  return (props=>{
-    return(
-      <div className={className}>
-      <WrappedComponent{...props}/>
-      </div>
-    )
-  })
+  const colours = ['red', 'pink', 'orange', 'blue', 'green', 'yellow'];
+  const randomColour = colours[Math.floor(Math.random() * 6)];
+  const className = randomColour + '-text';
+
+  return (props) => (
+    <div className={className}>
+      <WrappedComponent {...props} />
+    </div>  
+  )
+  
 }
 
 export default Rainbow
